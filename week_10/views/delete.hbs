@@ -1,0 +1,61 @@
+<h1>{{title}}</h1>
+
+<table>
+    <tr>
+        <td>Dname</td>
+        <td>Dnumber</td>
+    </tr>
+    {{#each department}}
+        <form method="post">
+            <tr>
+                <!-- input tag를 사용하여 입력 가능한 형태로 변경. -->
+                <td>{{Dname}}</td>
+                <td>{{Dnumber}}</td>
+                <!-- formaction 속성을 활용하여 입력한 값을 넘겨줌. -->
+                <!-- department table에 대한 삭제 기능을 추가할 때의 code.
+                <td style="border: none; margin-left: 10px;">
+                    <button 
+                        style="margin-left: 10px;"
+                        type="submit"
+                        name="delBtn" 
+                        value={{Dnumber}} 
+                        formaction="/delete">
+                    삭제
+                    </button>
+                </td>
+                -->
+            </tr>
+        </form>
+    {{/each}}
+</table>
+
+<h1>{{title2}}</h1>
+
+<table>
+    <tr>
+        <td>Pname</td>
+        <td>Pnumber</td>
+        <td>Plocation</td>
+    </tr>
+    {{#each project}}
+        <form method="post">
+            <tr>
+                <!-- input tag를 사용하여 입력 가능한 형태로 변경. -->
+                <td>{{Pname}}</td>
+                <td>{{Pnumber}}</td>
+                <td>{{Plocation}}</td>
+                <!-- formaction 속성을 활용하여 입력한 값을 넘겨줌. -->
+                <td style="border: none; margin-left: 10px;">
+                    <button 
+                        style="margin-left: 10px;"
+                        type="submit"
+                        name="prolBtn" 
+                        value={{Pnumber}}
+                        formaction="/delete">
+                    삭제
+                    </button>
+                </td>
+            </tr>
+        </form>
+    {{/each}}
+</table>
